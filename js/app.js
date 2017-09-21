@@ -19,16 +19,19 @@ $(document).ready(function() {
 		}
 	}
 
-	var isWinner = (function)
-	//if classes are = ||
+	var messages = $('.messages');
+
+	// if classes are = ||
 	// classes are = ||
-	// classes are =  ||
-	// {alert("X wins!");}
+	// classes are =
+	// return alert "X is winner!"
+	// window.alert("Yas queen! That does impress me much! X is winner")
 	// else if classes are = ||
 	// classes are = ||
-	// classes are = ||
-	// {alert("O wins!");}
-	// if (clicks > 9) alert{("NOBODY WINS");}
+	// classes are =
+	// return alert "O is winner!"
+	// window.alert("Yas queen! That does impress me much! O is winner")
+
 
 	$('#finished').click(function() {
     location.reload();
