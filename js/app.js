@@ -19,8 +19,16 @@ $(document).ready(function() {
 		}
 	}
 
-	var messages = $('.messages');
-
+	var isWinner = (function)
+	//if classes are = ||
+	// classes are = ||
+	// classes are =  ||
+	// {alert("X wins!");}
+	// else if classes are = ||
+	// classes are = ||
+	// classes are = ||
+	// {alert("O wins!");}
+	// if (clicks > 9) alert{("NOBODY WINS");}
 
 	$('#finished').click(function() {
     location.reload();
