@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 
-	window.alert("Welcome to Broad City inspired tic tac toe! Hopefully you don't get a little intense over competition -  Player 1 you start!");
+	//window.alert("Welcome to Broad City inspired tic tac toe! Hopefully you don't get a little intense over competition -  Player 1 you start!");
 
 
 	var count = 0;
@@ -17,20 +17,25 @@ $(document).ready(function() {
 		} else {
 			$(this).append('O');
 		}
+		 $(this).off('click');
 	}
 
-	var messages = $('.messages');
-
-	// if classes are = ||
-	// classes are = ||
-	// classes are =
-	// return alert "X is winner!"
-	// window.alert("Yas queen! That does impress me much! X is winner")
-	// else if classes are = ||
-	// classes are = ||
-	// classes are =
-	// return alert "O is winner!"
-	// window.alert("Yas queen! That does impress me much! O is winner")
+	function isWinner() {
+	if ( 
+		$('#box1' ==='X','#box2' ==='X', '#box3' ==='X' ||
+		$('#box1', '#box4', '#box7' === 'X') ||
+		$('#box1', '#box5', '#box9' === 'X') ||
+		$('#box2', '#box5', '#box8' === 'X') ||
+		$('#box3', '#box6', '#box9' === 'X'))
+		{return alert("Yas queen! That does impress me much! Player 2 is the winner.");}
+	else if (
+		$('#box1', '#box2', '#box3') === 'O' ||
+		$('#box1', '#box4', '#box7') === 'O' ||
+		$('#box1', '#box5', '#box9') === 'O' ||
+		$('#box2', '#box5', '#box8') === 'O' ||
+		$('#box3', '#box6', '#box9') === 'O')
+		{return alert("Yas queen! That does impress me much! Player 1 is the winner.");}
+	}
 
 
 	$('#finished').click(function() {
