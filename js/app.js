@@ -13,32 +13,30 @@ $(document).ready(function() {
 		console.log($(this));
 		count += 1;
 		if (count %2 == 0) {
-			$(this).append('X');
+			$(this).append("X").addClass("X");
 		} else {
-			$(this).append('O');
+			$(this).append('O').addClass("X");
 		}
 		 $(this).off('click');
 	}
 
 	function isWinner() {
-	if ( 
-		$('#box1' ==='X','#box2' ==='X', '#box3' ==='X' ||
-		$('#box1', '#box4', '#box7' === 'X') ||
-		$('#box1', '#box5', '#box9' === 'X') ||
-		$('#box2', '#box5', '#box8' === 'X') ||
-		$('#box3', '#box6', '#box9' === 'X'))
+	if  (
+		($("#box1").hasClass("X") && $("#box2").hasClass("X") && $("#box3").hasClass("X")) ||
+		($("#box1").hasClass( "X" ) && $("#box4").hasClass( "X" ) && $("#box7").hasClass( "X" )) ||
+		($("#box1").hasClass( "X" ) && $("#box5").hasClass( "X" ) && $("#box9").hasClass( "X" )) ||
+		($("#box2").hasClass( "X" ) && $("#box5").hasClass( "X" ) && $("#box8").hasClass( "X" )) ||
+		($("#box3").hasClass( "X" ) && $("#box6").hasClass( "X" ) && $("#box9").hasClass( "X" )))
 		{return alert("Yas queen! That does impress me much! Player 2 is the winner.");}
 	else if (
-		$('#box1', '#box2', '#box3') === 'O' ||
-		$('#box1', '#box4', '#box7') === 'O' ||
-		$('#box1', '#box5', '#box9') === 'O' ||
-		$('#box2', '#box5', '#box8') === 'O' ||
-		$('#box3', '#box6', '#box9') === 'O')
+		($("#box1").hasClass("O") && $("#box2").hasClass("O") && $("#box3").hasClass("O")) ||
+		($("#box1").hasClass("O") &&  $("#box4").hasClass("O") && $("#box7").hasClass("O")))
 		{return alert("Yas queen! That does impress me much! Player 1 is the winner.");}
-	}
+	};
 
 
 	$('#finished').click(function() {
     location.reload();
 	});
 });
+
