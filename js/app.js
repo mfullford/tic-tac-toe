@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 
-	window.alert("Welcome to Broad City inspired tic tac toe! Hopefully you don't get a little intense over competition -  Player 1 you start!");
+	window.alert("Welcome to Broad City inspired tic tac toe! Hopefully you don't get a little intense over competition -  Player 2 you start!");
 
 
 	var count = 0;
